@@ -9,7 +9,7 @@ void PhoneBook::search_contact()
         {
                 std::cout << "its an empty phone contact, ADD some infos";
                 std::cout << std::endl;
-
+                return ;
         }
         else
         {
@@ -40,14 +40,14 @@ void PhoneBook::search_contact()
         i++;
 }
 
-        std::cout << "Enter the index of what information you need: ";
+        if(i > 0)
+                std::cout << "Enter the index of what information you need: ";
         
-        // if(std::getline(std::cin >> std::ws ,line))
-        if(std::getline(std::cin >> std::ws ,line))
-        //std::cin.fail()
-    
-                std::cout << "input fail";
+        if(std::cin.eof())
+                exit(1);
 
+        if(add_counter > 0)
+                (std::getline(std::cin >> std::ws ,line));
         for(size_t j =0; line.length() > j; j++)
         {
                 char c = line[j];
@@ -63,6 +63,8 @@ void PhoneBook::search_contact()
         int input = std::atoi(line.c_str());
         if(input >= 0 && input < add_counter)
         {
+                if(std::cin.eof())
+                        exit(1);
                 std::cout << "First Name: " << contacts[input].getFirstName() << std::endl;
                 std::cout << "Last Name: " << contacts[input].getLastName() << std::endl;
                 std::cout << "Nickname: " << contacts[input].getNickname() << std::endl;

@@ -9,11 +9,12 @@ int main(int ac, char **av)
     {
         while(1)
         {
+
+            if(std::cin.eof())
+                exit(1);
             std::cout << "Enter command: ";
             std::getline(std::cin, input);
-        
-            // if(std::getline(std::cin, input))
-            //     std::cout << "line fail";
+  
             if(input == "ADD")
                 phone.add_contact();
             else if(input == "SEARCH")
