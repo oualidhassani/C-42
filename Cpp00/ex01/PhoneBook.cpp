@@ -73,7 +73,7 @@ void PhoneBook::search_contact()
         }
         else
         {
-                std::cout << "Invalid index! Please enter a number between 0 and " 
+                std::cout << "Invalid index! Please enter a number between 0 and 8" 
                         << (add_counter - 1) << std::endl;
         }        
 
