@@ -1,6 +1,5 @@
 #include "Zombie.hpp"
 
-
 Zombie::Zombie(std::string name1)
 {
     name = name1;

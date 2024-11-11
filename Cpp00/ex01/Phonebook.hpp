@@ -15,7 +15,8 @@ class PhoneBook
         {
             add_counter = 0; 
             oldest = 0;
-    }
+        }
+        ~PhoneBook();
     void add_contact();
     void search_contact();
 

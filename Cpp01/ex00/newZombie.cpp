@@ -7,5 +7,7 @@ Zombie::~Zombie()
 Zombie* newZombie(std::string name)
 {
     Zombie *new_one = new Zombie(name);
+    if(!new_one)
+        return(NULL);
     return new_one;
 }

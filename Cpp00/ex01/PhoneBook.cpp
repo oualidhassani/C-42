@@ -1,5 +1,7 @@
 #include "Phonebook.hpp"
-
+PhoneBook::~PhoneBook()
+{
+}
 void PhoneBook::search_contact()
 {
         int i = 0;
