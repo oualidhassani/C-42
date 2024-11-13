@@ -15,27 +15,6 @@ class Weapon
 
 };
 
-class HumanA
-{
-    private:
-        std::string name;
-        Weapon &weapon;
-    public:
-        HumanA(const std::string &New_name,Weapon &new_type);
-        ~HumanA();
-        void    attack();
-};
 
-class HumanB
-{
-    private:
-        std::string name;
-        Weapon *weapon;
-    public:
-        HumanB(const std::string New_name);
-        ~HumanB();
-        void    attack();
-        void    setWeapon(Weapon &weapon);
-};
 
 #endif
