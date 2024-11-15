@@ -29,10 +29,3 @@ fclean : clean
 
 re: fclean all
 
-
-
-
-#// void open_function(std::string s1, std::string s2, const char *s)
-#// {
-
-#// }
