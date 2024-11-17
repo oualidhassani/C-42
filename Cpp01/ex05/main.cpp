@@ -2,5 +2,12 @@
 
 int main()
 {
-    return 0;
+    Harl test;
+
+    test.complain(NULL);
+    test.complain("debug");
+    test.complain("warning");
+    test.complain("info");
+    test.complain("a");
+    
 }

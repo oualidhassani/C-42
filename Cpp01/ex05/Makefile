@@ -1,4 +1,4 @@
-NAME = file
+NAME = Harl
 
 CC = c++
 
