@@ -3,6 +3,11 @@
 Weapon::~Weapon()
 {
 }
+
+Weapon::Weapon()
+{
+}
+
 Weapon::Weapon(std::string New_type) : type(New_type)
 {
 }

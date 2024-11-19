@@ -8,9 +8,11 @@ void Zombie::announce(void)
 {
     std::cout << "<" << name <<  ">: BraiiiiiiinnnzzzZ..." <<std::endl;
 }
+
 Zombie::Zombie(std::string name) : name(name)
 {
 }
+
 Zombie::Zombie() : name("no named zombbie")
 {
 }
@@ -23,6 +25,8 @@ Zombie* zombieHorde(int N, std::string name)
     Zombie    *obj = new Zombie[N];
     if(!obj)
         return (NULL);
+    if(name.empty())
+        return NULL;
     while(N > n)
     {
         obj[n] =  Zombie(name);

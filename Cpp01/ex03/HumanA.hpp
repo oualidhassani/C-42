@@ -8,6 +8,7 @@ class HumanA
         std::string name;
         Weapon &weapon;
     public:
+        HumanA();
         HumanA(const std::string &New_name,Weapon &new_type);
         ~HumanA();
         void    attack();

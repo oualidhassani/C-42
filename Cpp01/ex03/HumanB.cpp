@@ -4,6 +4,10 @@ HumanB::HumanB(const std::string New_name) : name(New_name), weapon(nullptr)
 {
 }
 
+HumanB::HumanB()
+{
+}
+
 HumanB::~HumanB()
 {
 }

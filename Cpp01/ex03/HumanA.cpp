@@ -3,6 +3,11 @@
 HumanA::HumanA(const std::string &New_name, Weapon &new_type) : name(New_name), weapon(new_type)
 {
 }
+
+HumanA::HumanA()
+{
+}
+
 HumanA::~HumanA()
 {
 }
