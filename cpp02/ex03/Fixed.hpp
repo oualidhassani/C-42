@@ -1,17 +1,17 @@
 #ifndef FIXED_HPP
 #define FIXED_HPP
 #include <iostream>
-#include <cmath>
+
 class Fixed
 {
     private:
         int fixed_var;
         static const int num_frac;
     public:
-        Fixed();
         Fixed(const int a);
-        Fixed(const Fixed& fx);
         Fixed(const float b);
+        Fixed();
+        Fixed(const Fixed& fx);
         Fixed& operator=(const Fixed &fx);
         ~Fixed();
         float toFloat( void ) const;
@@ -37,8 +37,11 @@ class Fixed
         static const Fixed& max(Fixed const &oth1, Fixed const &oth2);
         int getRawBits(void) const;
         void setRawBits( int const raw );
+
+
 };
 
-std::ostream& operator<<(std::ostream& os, const Fixed& fx) ;
+std::ostream& operator<<(std::ostream& os, const Fixed& fx);
+
 
 #endif

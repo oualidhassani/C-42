@@ -49,15 +49,8 @@ float Fixed::toFloat( void ) const
     return static_cast<float>(fixed_var) / (1 << num_frac);
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& fx) 
-{
-    os << fx.toFloat();
-    return os;
-}
-
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return fixed_var;
 }
 
