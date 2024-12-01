@@ -19,7 +19,7 @@ Fixed::Fixed(const Fixed& fx)
     std::cout << "Copy Constructor called" << std::endl;
 
     fixed_var = fx.fixed_var;
-    // *this = fx;
+    *this = fx;
 }
 
 Fixed&  Fixed::operator=(const Fixed &fx)

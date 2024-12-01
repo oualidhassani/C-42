@@ -30,9 +30,9 @@ Fixed Point::getY() const
 Fixed Point::area(Point const p1, Point const p2, Point const p3)
 {
     
-    Fixed result = (p1.getX() * (p2.getY() - p3.getY()) + 
-                    p2.getX() * (p3.getY() - p1.getY()) + 
-                    p3.getX() * (p1.getY() - p2.getY())) / Fixed(2);
+    Fixed result = std::abs((p1.getX() * (p2.getY() - p3.getY()) + 
+                           p2.getX() * (p3.getY() - p1.getY()) + 
+                           p3.getX() * (p1.getY() - p2.getY())).toFloat() / 2.0f);
     
     return result;
 }

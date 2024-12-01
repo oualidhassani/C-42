@@ -83,7 +83,8 @@ Fixed Fixed::operator/(Fixed const &oth)
  }
 
 
-const Fixed& Fixed::min(const Fixed& oth1, const Fixed& oth2) {
+const Fixed& Fixed::min(const Fixed& oth1, const Fixed& oth2) 
+{
     return (oth1 < oth2) ? oth1 : oth2;
 }
 
@@ -93,18 +94,22 @@ const Fixed& Fixed::min(const Fixed& oth1, const Fixed& oth2) {
  }
 
 
-const Fixed& Fixed::max(const Fixed& oth1, const Fixed& oth2) {
+const Fixed& Fixed::max(const Fixed& oth1, const Fixed& oth2)
+ {
     return (oth1 > oth2) ? oth1 : oth2;
 }
 
-Fixed	Fixed::operator-(Fixed const &other) const {
+Fixed	Fixed::operator-(Fixed const &other) const
+ {
 	Fixed	ret;
 	ret.setRawBits(getRawBits() - other.getRawBits());
 	return ret;
 }
 
-Fixed	Fixed::operator+(Fixed const &other) const {
+Fixed	Fixed::operator+(Fixed const &other) const 
+{
 	Fixed	ret;
 	ret.setRawBits(getRawBits() + other.getRawBits());
 	return ret;
 }
+

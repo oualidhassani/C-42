@@ -3,10 +3,10 @@
 int main()
 {
     Point a(0, 0);
-    Point b(10, 0);
+    Point b(3, 0);
     Point c(5, 5);
 
-    Point insidePoint(5, 2);
+    Point insidePoint(3.4, 1);
 
     Point outsidePoint(20, 20);
 
