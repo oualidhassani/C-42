@@ -9,9 +9,9 @@ class Fixed
         static const int num_frac;
     public:
         Fixed();
+        ~Fixed();
         Fixed(const Fixed& fx);
         Fixed& operator=(const Fixed &fx);
-        ~Fixed();
         int getRawBits( void ) const;
         void setRawBits( int const raw );
 };

@@ -30,7 +30,6 @@ bool Fixed::operator!=(Fixed const &oth) const
     return(this->fixed_var != oth.fixed_var);
 }
 
-
 Fixed Fixed::operator++()
 {
     this->fixed_var++;
@@ -112,4 +111,3 @@ Fixed	Fixed::operator+(Fixed const &other) const
 	ret.setRawBits(getRawBits() + other.getRawBits());
 	return ret;
 }
-

@@ -7,18 +7,16 @@ Fixed::~Fixed()
     std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed()
+Fixed::Fixed() : fixed_var(0)
 {
     std::cout << "Default constructor called" << std::endl;
-
-    fixed_var = 0;
 }
 
 Fixed::Fixed(const Fixed& fx)
 {
     std::cout << "Copy Constructor called" << std::endl;
 
-    fixed_var = fx.fixed_var;
+    fixed_var = fx.getRawBits();
 }
 
 Fixed&  Fixed::operator=(const Fixed &fx)
@@ -28,7 +26,7 @@ Fixed&  Fixed::operator=(const Fixed &fx)
     if(this == &fx)
         return *this;
     
-    this->fixed_var = fx.fixed_var;
+    this->fixed_var = fx.getRawBits();
 
     return *this;
 }
