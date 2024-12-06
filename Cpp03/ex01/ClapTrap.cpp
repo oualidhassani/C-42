@@ -1,18 +1,18 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() :  Name("default"), Hit_points(10), Energy_points(10), Attack_damage(0)
 {
-    std::cout << "default constructor is called  for ClapTrap " << std::endl;
+    std::cout << "ClapTrap default constructor is called " << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : Name(name), Hit_points(10), Energy_points(10), Attack_damage(0)
 {
-    std::cout << "Constructor is called for ClapTrap" << std::endl;
+    std::cout << "ClapTrap Constructor is called " << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-    std::cout << "Copy constructor is called ClapTrap " << std::endl;
+    std::cout << "ClapTrap Copy constructor is called ClapTrap " << std::endl;
 
     Name = other.Name;
     Hit_points = other.Hit_points;
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &other)
 {
-    std::cout << "Copy assignement operator is called ClapTrap " << std::endl;
+    std::cout << "ClapTrap Copy assignement operator is called ClapTrap " << std::endl;
 
     if (this == &other)
         return *this;
@@ -38,7 +38,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &other)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "destructor is called ClapTrap " << std::endl;
+    std::cout << "ClapTrap destructor is called" << std::endl;
 }
 
 std::string ClapTrap::getName() const
@@ -80,7 +80,7 @@ void ClapTrap::attack(const std::string& target)
     if(getHitPoints() > 0 && static_cast<unsigned int>(Hit_points) > amount)
     {
         this->Hit_points = getHitPoints() - amount;
-        std::cout << "ClapTrap has lost " << getHitPoints() << std::endl; 
+        std::cout << "ClapTrap  have now " << getHitPoints() << std::endl; 
     }
     else
         std::cout << "no hit points " << std::endl;
