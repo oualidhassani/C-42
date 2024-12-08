@@ -65,7 +65,6 @@ void ClapTrap::attack(const std::string& target)
 {
     if(getEnergyPoints() > 0 && getHitPoints() > 0)
     {
-        this->Hit_points--;
         this->Energy_points--;
         std::cout << getName() << " attacks " << target << " with damage " << getAttackDamage() << std::endl;
     }
