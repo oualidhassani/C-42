@@ -6,7 +6,7 @@ int main()
     Point b(3, 0);
     Point c(5, 5);
 
-    Point insidePoint(3.4, 1);
+    Point insidePoint(3.9, 2.9);
 
     Point outsidePoint(20, 20);
 

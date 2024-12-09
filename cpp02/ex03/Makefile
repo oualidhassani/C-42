@@ -4,7 +4,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Fixed.cpp Point.cpp operators.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp operators.cpp bsp.cpp
 
 OBJ = $(SRCS:.cpp=.o)
 

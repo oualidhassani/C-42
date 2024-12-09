@@ -32,29 +32,17 @@ Fixed Point::area(Point const p1, Point const p2, Point const p3)
     
     Fixed result = std::abs((p1.getX() * (p2.getY() - p3.getY()) + 
                            p2.getX() * (p3.getY() - p1.getY()) + 
-                           p3.getX() * (p1.getY() - p2.getY())).toFloat() / 2.0f);
+                           p3.getX() * (p1.getY() - p2.getY())).toFloat()) / 2.0f;
     
     return result;
 }
 
-bool Point::bsp( Point const a, Point const b, Point const c, Point const point)
+bool Point::bsp(Point const a, Point const b, Point const c, Point const point) 
 {
-    Fixed area1;
-    Fixed area2;
-    Fixed area3;
-    Fixed areapoint;
-    Fixed resultfinal;
+    Fixed areaABC = Point::area(a, b, c);
+    Fixed areaPAB = Point::area(point, a, b);
+    Fixed areaPBC = Point::area(point, b, c);
+    Fixed areaPCA = Point::area(point, c, a);
 
-    area1 = area(a,b,point);
-    area2 = area(a, point, c);
-    area3 = area(point,b , c);
-    areapoint = area(a,b, c);
-
-    resultfinal = area1 + area2 + area3;
-
-
-    if(resultfinal <= areapoint)
-        return true;
-    return false;
-
+    return (areaABC == (areaPAB + areaPBC + areaPCA));
 }

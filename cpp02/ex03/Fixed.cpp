@@ -37,7 +37,6 @@ Fixed::Fixed(const float b)
 }
 
 
-
 int Fixed::toInt( void ) const
 {
     return fixed_var >> num_frac;
