@@ -54,3 +54,39 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &other)
 
     return *this;
 }
+
+void ScavTrap::attack(const std::string& target)
+{
+    if(getEnergyPoints() > 0 && getHitPoints() > 0)
+    {
+        this->Energy_points--;
+        std::cout << getName() << " attacks " << target << " with damage " << getAttackDamage() << std::endl;
+    }
+    else
+        std::cout << "no energy points to attack with " << std::endl;
+}
+
+ void ScavTrap::takeDamage(unsigned int amount)
+ {
+    if(amount > static_cast<unsigned int>(Hit_points))
+        Hit_points = 0;
+    if(getHitPoints() > 0 && static_cast<unsigned int>(Hit_points) > amount)
+    {
+        this->Hit_points = getHitPoints() - amount;
+        std::cout << "ScavTrap has now " << getHitPoints() << std::endl; 
+    }
+    else
+        std::cout << "no hit points " << std::endl;
+ }
+
+ void ScavTrap::beRepaired(unsigned int amount)
+ {
+    if(getEnergyPoints() > 0 && getHitPoints() > 0)
+    {
+        this->Hit_points += amount;
+        this->Energy_points--;
+        std::cout << "ScavTrap repaired with " << amount << " hit points" << std::endl;
+    }
+    else
+        std::cout << "no energy points to repair with " << std::endl;
+ }

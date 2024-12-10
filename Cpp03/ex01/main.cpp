@@ -9,6 +9,7 @@ int main()
     obj.beRepaired(10);
     obj.guardGate();
 
+    
     // ScavTrap obj1;
     // obj1.attack("Enemy");
     // obj1.takeDamage(5);
