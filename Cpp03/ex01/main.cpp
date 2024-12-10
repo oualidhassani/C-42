@@ -2,12 +2,12 @@
 
 int main()
 {
-    ScavTrap obj("oualid");
+    // ScavTrap obj("oualid");
 
-    obj.attack("Enemy");
-    obj.takeDamage(5);
-    obj.beRepaired(10);
-    obj.guardGate();
+    // obj.attack("Enemy");
+    // obj.takeDamage(5);
+    // obj.beRepaired(10);
+    // obj.guardGate();
 
     
     // ScavTrap obj1;
