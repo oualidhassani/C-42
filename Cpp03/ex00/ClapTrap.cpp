@@ -14,10 +14,6 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 {
     std::cout << "Copy constructor is called " << std::endl;
 
-    Name = other.Name;
-    Hit_points = other.Hit_points;
-    Energy_points = other.Energy_points;
-    Attack_damage = other.Attack_damage;
     *this = other;
 }
 
@@ -66,7 +62,7 @@ void ClapTrap::attack(const std::string& target)
     if(getEnergyPoints() > 0 && getHitPoints() > 0)
     {
         this->Energy_points--;
-        std::cout << getName() << " attacks " << target << " with damage " << getAttackDamage() << std::endl;
+        std::cout << getName() << " ClapTrap attacks " << target << " with damage " << getAttackDamage() << std::endl;
     }
     else
         std::cout << "no energy points to attack with " << std::endl;

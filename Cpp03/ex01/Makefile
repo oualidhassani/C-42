@@ -8,8 +8,6 @@ SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJ = $(SRCS:.cpp=.o)
 
-AR = ar rcs
-
 RM = rm -rf
 
 all : $(NAME)
